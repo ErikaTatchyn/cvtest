@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    background: #eee;
+}
+
+.container {
+    width: 900px;
+    margin: auto;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.sidebar {
+    flex: 1;
+    background: #094b8f;
+    color: white;
+    padding: 30px;
+}
+
+.sidebar.hidden {
+    display: none;
+}
+
+.side-block {
+    margin: 50px 0;
+}
+
+.side-title {
+    text-transform: uppercase;
+}
+.img {
+    text-align: center;
+}
+
+.img img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.content {
+    flex: 2;
+    padding: 30px;
+    background: white;
+}
+
+.name {
+    color: #094b8f;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.experience {
+    margin: 40px;
+}
+
+.experience-title {
+    color: #4485b9;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.place-time {
+    font-style: italic;
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.subtitle {
+    margin-bottom: 5px;
+}
+
+.skill-item {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .sidebar {
+        flex: initial;
+        width: 100%;
+    }
+}
+
+.burger {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #4485b9;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
